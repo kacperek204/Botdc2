@@ -249,29 +249,6 @@ exports.start = function (SETUP) {
   //   channel.send(`Welcome to our server, ${member}, please read the rules`);
   // });
 
-  bot.on("message", (message) => {
-    //whenever a message is sent
-    if (!message.member.hasPermission("ADMINISTRATOR")) {
-      if (
-        message.content.includes("discord.gg/") ||
-        message.content.includes("discordapp.com/invite/") ||
-        message.content.includes("discord.me/")
-      ) {
-        const Author = message.member.user.tag;
-        message
-          .delete() //delete the message
-          .then(
-            message.channel.send({
-              embed: {
-                title: `Discord link sent by ${Author} deleted`,
-                color: 16711680,
-                description: "Sending link is against the rules!",
-              },
-            })
-          );
-      }
-    }
-  });
 
   const updateMessage = function () {
     getVars()
