@@ -15,14 +15,16 @@ module.exports.help = {
   name: "clear",
 };
 
-if(command =="say"){
-  var embed = new Discord.MessageEmbed()
-  .setAuthor(message.member.user.username, message.member.user.avatarURL)
-  .setColor('#0099ff')
-  .setDescription('Bot')
-  message.delete()
-  if(message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send(message.content.slice(prefix.length+3))
-  else 
-  return message.channel.send("Nie posiadasz permisji"), message.channel.send(embed)
-  
+module.exports.run = async (bot, message, args) => {
+  if(command =="say"){
+    var embed = new Discord.MessageEmbed()
+    .setAuthor(message.member.user.username, message.member.user.avatarURL)
+    .setColor('#0099ff')
+    .setDescription('Bot')
+    message.delete()
+    if(message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send(message.content.slice(prefix.length+3))
+    else 
+    return message.channel.send("Nie posiadasz permisji"), message.channel.send(embed)
+    
+  };
 };
