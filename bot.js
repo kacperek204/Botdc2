@@ -214,8 +214,7 @@ exports.start = function (SETUP) {
       .setFooter(TICK_N % 2 === 0 ? `⚪ ${SERVER_NAME}` : `⚫ ${SERVER_NAME}`)
       .setTimestamp(new Date())
       .addField(
-        "\n\u200b\nUse connect  to join the server\n\u200b\n",
-        false
+        "\n\u200b\nUżyj connect cfx.re/join/e8a3em aby dołączyć na serwer\n\u200b\n",
       );
     if (STATUS !== undefined) {
       embed.addField(":warning: Status do servidor:", `${STATUS}\n\u200b\n`);
@@ -261,14 +260,14 @@ exports.start = function (SETUP) {
             let embed = UpdateEmbed()
               .addField("Server Status", ":white_check_mark: Online", true)
               .addField(
-                "Queue",
+                "W kolejce",
                 queue === "Enabled" || queue === undefined
                   ? "0"
                   : queue.split(":")[1].trim(),
                 true
               )
               .addField(
-                "Online players",
+                "Graczy online",
                 `${players.length}/${MAX_PLAYERS}\n\u200b\n`,
                 true
               );
@@ -462,7 +461,7 @@ exports.start = function (SETUP) {
               message.author.displayAvatarURL
             )
             .setColor(0x2894c2)
-            .setTitle("Suggestion")
+            .setTitle("Propozycja")
             .setDescription(message.content)
             .setTimestamp(new Date());
           message.channel
@@ -495,7 +494,7 @@ exports.start = function (SETUP) {
             .setColor(0x2894c2)
             .setTitle("Bug Report")
             .setDescription(
-              "Your report has been successfully sent to the staff team!"
+              "Twój report został wysłany do administracji!"
             )
             .setTimestamp(new Date());
           let embedStaff = new Discord.RichEmbed()
