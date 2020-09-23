@@ -216,7 +216,7 @@ exports.start = function (SETUP) {
       .addField(
         "\n\u200b\nUżyj connect cfx.re/join/e8a3em aby dołączyć na serwer\n\u200b\n",
       );
-    if (STATUS !== undefined) {
+    if (STATUS !== Włączony) {
       embed.addField(":warning: Status do servidor:", `${STATUS}\n\u200b\n`);
       embed.setColor(0xff5d00);
     }
