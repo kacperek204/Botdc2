@@ -14,5 +14,9 @@
   "iddev": "759766752006766633",
   "komendadev": "dev",
   "rolasay": "owner",
-  "komendasay": "say"
+  "komendasay": "say",
+
+  "rolehex": "owner",
+  "komendahex": "hex"
+
 }
