@@ -1,7 +1,6 @@
 ﻿const setup = require("./setup.js");
 const { start } = require("./bot.js");
 
-const bot = new Discord.Client({disableEveryone: true})
 
 const printValues = function (values, text) {
   console.log(text ? text : "Current values:");
@@ -78,7 +77,9 @@ if (process.argv.includes("-c") || process.argv.includes("--config")) {
         })
         .catch(console.error);
     });
-}
+};
+
+const bot = new Discord.Client({disableEveryone: true})
 
 bot.on("message", async message => {
   if (message.author.bot) return;
