@@ -17,6 +17,10 @@
   "komendasay": "say",
 
   "rolehex": "owner",
-  "komendahex": "hex"
+  "komendahex": "hex",
 
+  
+  "rolaogl": "owner",
+  "idogl": "759771725721239562", 
+  "komendaogl": "ogloszenie"
 }
