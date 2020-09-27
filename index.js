@@ -79,6 +79,7 @@ if (process.argv.includes("-c") || process.argv.includes("--config")) {
     });
 };
 
+const Discord = require("discord.js")
 const bot = new Discord.Client({disableEveryone: true})
 
 bot.on("message", async message => {
