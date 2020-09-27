@@ -1,6 +1,6 @@
 {
   "PREFIX": "!",
-  "URL_SERVER": "http://88.198.10.118:30120",
+  "URL_SERVER": "http://51.83.176.98:30120",
   "SERVER_NAME": "EpicRP",
   "LOG_LEVEL": "2",
   "BOT_TOKEN": "",
@@ -12,5 +12,5 @@
   "LOG_CHANNEL": "748815834662830081",
   "roladev": "754493871454683196", 
   "iddev": "759766752006766633",
-  "komendadev": "dev", 
+  "komendadev": "dev"
 }
