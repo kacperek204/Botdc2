@@ -492,7 +492,7 @@ exports.start = function (SETUP) {
               message.author.displayAvatarURL
             )
             .setColor(0x2894c2)
-            .setTitle("Bug Report")
+            .setTitle("Report")
             .setDescription(
               "Twój report został wysłany do administracji!"
             )
@@ -505,7 +505,7 @@ exports.start = function (SETUP) {
               message.author.displayAvatarURL
             )
             .setColor(0x2894c2)
-            .setTitle("Bug Report")
+            .setTitle("Report")
             .setDescription(message.content)
             .setTimestamp(new Date());
           message.channel.send(embedUser).then(null).catch(console.error);
