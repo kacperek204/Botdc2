@@ -10,7 +10,7 @@ let embeda = new Discord.RichEmbed()
     .addField(`${message.member.displayName}`, `Odmowa dostępu`)
     .setFooter(sicon)
     .setTimestamp()
-    if (!message.member.roles.find(r => r.name === config.roladev)) return message.channel.send(embeda);
+    if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send(embeda);
 
           const tekst = args.join(' ');
           if (!tekst) return message.channel.send("Podaj tekst ogłoszenia"); 
