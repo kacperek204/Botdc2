@@ -4,19 +4,21 @@
   "SERVER_NAME": "EpicRP",
   "LOG_LEVEL": "2",
   "BOT_TOKEN": "",
-  "CHANNEL_ID": "759770913117437973",
+  "CHANNEL_ID": "759800548261888021",
   "MESSAGE_ID": "759781363070140466",
-  "SUGGESTION_CHANNEL": "758066896691134475",
-  "BUG_CHANNEL": "757899288368906280",
-  "BUG_LOG_CHANNEL": "758059894216851486",
+  "SUGGESTION_CHANNEL": "759688392630861844",
+  "BUG_CHANNEL": "759689142786981889",
+  "BUG_LOG_CHANNEL": "759800658936332298",
   "LOG_CHANNEL": "748815834662830081",
-  "roladev": "owner", 
+  "roladev": "owner , dev", 
   "iddev": "759766752006766633",
   "komendadev": "dev",
-  "rolasay": "owner",
+  "rolasay": "Wl Checker , ",
+  
+  
   "komendasay": "say",
   
   "rolaogl": "owner",
-  "idogl": "759771725721239562", 
+  "idogl": "759691090672091188", 
   "komendaogl": "ogloszenie"
 }

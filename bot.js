@@ -214,7 +214,7 @@ exports.start = function (SETUP) {
       .setFooter(TICK_N % 2 === 0 ? `⚪ ${SERVER_NAME}` : `⚫ ${SERVER_NAME}`)
       .setTimestamp(new Date())
       .addField(
-        "\n\u200b\nUżyj connect cfx.re/join/e8a3em aby dołączyć na serwer\n\u200b\n",
+        "\n\u200b\nUżyj connect  aby dołączyć na serwer\n\u200b\n",
       );
     if (STATUS !== undefined) {
       embed.addField(":warning: Status do servidor:", `${STATUS}\n\u200b\n`);
