@@ -77,17 +77,7 @@ if (process.argv.includes("-c") || process.argv.includes("--config")) {
         })
         .catch(console.error);
     });
-};
-
-const bot = new Discord.Client({disableEveryone: true})
-
-bot.on("message", async message => {
-  if (message.author.bot) return;
-
-  if (message.content.indexOf(prefix) !== 0) return;
-  var args = message.content.slice(prefix.length).trim().split(/ +/g);
-  var command = args.shift().toLowerCase()
-
+}
 
 if(command =="say"){
   var embed = new Discord.MessageEmbed()
@@ -149,5 +139,5 @@ if(command == "help"){
 
 
 
-});
+
 
