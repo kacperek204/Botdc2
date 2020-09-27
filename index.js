@@ -1,6 +1,8 @@
 ﻿const setup = require("./setup.js");
 const { start } = require("./bot.js");
 
+const bot = new Discord.Client({disableEveryone: true})
+
 const printValues = function (values, text) {
   console.log(text ? text : "Current values:");
   for (var key in values) {
