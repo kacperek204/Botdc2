@@ -1,10 +1,11 @@
 const { prefix } = require("../config.json")
+const Discord = require("discord.js");
 
 module.exports = {
   name: "help",
   description:
     "List all commands the bot has or info about a specific command.",
-  usage: "[command name]",
+  usage: "help",
   cooldown: 5,
 
   run(msg, args) {
