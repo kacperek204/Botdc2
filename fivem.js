@@ -11,7 +11,7 @@ global.Discord = require("discord.js");
 
 global.client = new Discord.Client();
 
-global.config = require("./cmds/config/config.json");
+global.config = require("./config.json");
 global.package = require("./package.json");
 global.servers = require('./auth/servers.json')
 global.req = require('request');
