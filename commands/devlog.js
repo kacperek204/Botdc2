@@ -16,7 +16,7 @@ let embeda = new Discord.RichEmbed()
           if (!tekst) return message.channel.send("Podaj tekst ogłoszenia"); 
           let reportEmbed = new Discord.RichEmbed() 
             .setTitle("📝Devlog") 
-            .setColor(`RANDOM`) 
+            .setColor(`#0099ff`) 
             .addField("Autor Devloga", `${message.author}`)
             .addField("Opis Devloga", tekst)
             .setFooter(sicon) 

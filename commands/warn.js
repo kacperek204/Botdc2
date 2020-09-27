@@ -30,7 +30,7 @@ module.exports.run = async (bot, message, args) => {
   let warnEmbed = new Discord.RichEmbed()
     .setDescription("Warns")
     .setAuthor(message.author.username)
-    .setColor("#fc6400")
+    .setColor("#0099ff")
     .addField("Warned User", `<@${wUser.id}>`)
     .addField("Warned In", message.channel)
     .addField("Number of Warnings", warns[wUser.id].warns)

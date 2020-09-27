@@ -16,7 +16,7 @@ let embeda = new Discord.RichEmbed()
           if (!tekst) return message.channel.send("Podaj tekst ogłoszenia"); // tutaj jak nic nie wpisze sie to bot pisze:
           let ogl = new Discord.RichEmbed() // tutaj tabelka sie tworzy
             .setTitle("📋Ogłoszenie") // tytuł
-            .setColor(`RANDOM`) // kolor
+            .setColor(`#0099ff`) // kolor
             .addField("Autor Ogłoszenia", `${message.author}`)
             .addField("Opis Ogłoszenia", tekst)
             .setFooter(sicon) // tutaj footer (podspodem)
