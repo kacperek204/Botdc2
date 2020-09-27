@@ -14,5 +14,11 @@
   "iddev": "759691404820873239", 
   "komendasay": "say", 
   "idogl": "759691090672091188", 
-  "komendaogl": "ogloszenie"
+  "komendaogl": "ogloszenie",
+  "komendaaccept": "accept",
+  "rolaaccept": "📝Akceptowanie podań",
+  "idaccept": "759691967315181568",
+  "idreject": "759691967315181568",
+  "rolareject": "📝Akceptowanie podań",
+  "komendareject": "reject"
 }
