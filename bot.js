@@ -91,8 +91,8 @@ exports.start = function (SETUP) {
   const LOG_CHANNEL = SETUP.LOG_CHANNEL;
   const STREAM_URL = SETUP.STREAM_URL;
   const SERVER_NAME = SETUP.SERVER_NAME;
-  const tweet_channel = SETUP.tweet_channel;
   const STREAM_CHANNEL = SETUP.STREAM_CHANNEL;
+  const tweet_channel = SETUP.tweet_channel;
   const prefix = SETUP.PREFIX;
   const UPDATE_TIME = 2500; // in ms
 
