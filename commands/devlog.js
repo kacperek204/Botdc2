@@ -26,8 +26,8 @@ let embeda = new Discord.RichEmbed()
             message.delete().catch(O_o=>{});
             message.guild.channels.get(config.iddev).sendMessage(reportEmbed);
         
-            return message.channel.send(message.content.slice(prefix.length+3))       
-    };
+            return;     
+    }
     
     
     module.exports.help = {
