@@ -93,6 +93,7 @@ exports.start = function (SETUP) {
   const SERVER_NAME = SETUP.SERVER_NAME;
   const STREAM_CHANNEL = SETUP.STREAM_CHANNEL;
   const tweet_channel = SETUP.tweet_channel;
+  const darkweb_channel = SETUP.darkweb_channel;
   const prefix = SETUP.PREFIX;
   const UPDATE_TIME = 2500; // in ms
 
@@ -527,6 +528,26 @@ exports.start = function (SETUP) {
             )
             .setColor(0x2894c2)
             .setTitle("Tweet")
+            .setDescription(message.content)
+            .setTimestamp(new Date());
+          message.channel
+            .send(embed)
+            .then((message) => {
+              const sent = message;
+            })
+            .catch(console.error);
+          return message.delete();
+        }
+        if (message.channel.id === darkweb_channel) {
+          let embed = new Discord.RichEmbed()
+            .setAuthor(
+            message.send
+              ? message.member
+              : message.author,
+              "https://i.imgur.com/VlyCHEn.jpg"
+            )
+            .setColor("#000000")
+            .setTitle("Anonim pisze:")
             .setDescription(message.content)
             .setTimestamp(new Date());
           message.channel
