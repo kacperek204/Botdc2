@@ -558,26 +558,6 @@ exports.start = function (SETUP) {
             .catch(console.error);
           return message.delete();
         }
-        if (message.channel.id === otomoto_channel) {
-          let embed = new Discord.RichEmbed()
-            .setAuthor(
-              message.member.nickname
-                ? message.member.nickname
-                : message.author.tag,
-              "https://i.imgur.com/YZwl3SN.png"
-            )
-            .setColor(0x2894c2)
-            .setTitle("Tweet")
-            .setDescription(message.content)
-            .setTimestamp(new Date());
-          message.channel
-            .send(embed)
-            .then((message) => {
-              const sent = message;
-            })
-            .catch(console.error);
-          return message.delete();
-        }
       }
     }
   });
