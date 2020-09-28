@@ -1,9 +1,9 @@
 const { RichEmbed } = require('discord.js')
 module.exports.run = async (bot, message, args) => {
         message.delete()
-const filter = response => {
-    return response.author.id === message.author.id
-};
+        const filter = response => {
+            return response.author.id === message.author.id
+        };
         message.reply(`Wpisz tytuł ogłoszenia (Masz 5 minut)`).then((w) => {
             message.channel.awaitMessages(filter, {
                 max: 1,
@@ -18,29 +18,26 @@ const filter = response => {
                         errors: ['time']
                     }).then((de => {
                         let desc = de.first().content;
-                        message.reply(`Wpisz cenę (Masz minutę)`).then((w) =>{
-                            message.channel.awaitMessages(filter,( {
-                                max: 1,
-                                time: 60000,
-                                errors: [`time`]
-                            }).then((de => {
-                                let price = de.first().content;
-                                message.channel.bulkDelete(1)
-                                let embed = new RichEmbed()
-                                    .setTitle(title)
-                                    .setDescription(desc)
-                                    .setColor("#D40F0A")
-                                    .setDescription(price)
-                                    .setThumbnail(message.author.avatarURL)
-                                    .addField("Autor Ogłoszenia", `${message.author}`)
-                                    .setTimestamp() 
-                            message.channel.send(embed)
-                            message.channel.bulkDelete(4)
-                        }))
-                        .catch((e => {
-                        message.reply(`Czasu upłynął! Spróbuj jeszcze raz!`)
+                        message.channel.bulkDelete(1)
+                        let embed = new RichEmbed()
+                            .setTitle(title)
+                            .setDescription(desc)
+                            .setColor("#D40F0A")
+                            .setDescription(price)
+                            .setThumbnail(message.author.avatarURL)
+                            .addField("Autor Ogłoszenia", `${message.author}`)
+                            .setTimestamp() 
+                        message.channel.send(embed)
+                        message.channel.bulkDelete(4)
                     }))
-                )
-            })
-        })         
+                }) 
+            }).catch((e => {
+                message.reply(`Czasu upłynął! Spróbuj jeszcze raz!`)
+            }))
+                
+        })
+    }      
 
+module.exports.help = {
+            name: "embed",
+};
