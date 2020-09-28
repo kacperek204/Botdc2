@@ -1,37 +1,43 @@
-const Discord = require("discord.js");
+const { RichEmbed} = require('discord.js')
 const config = require("../config.json");
 
 module.exports.run = async(bot, message, args, msg) => {
-
-    let sicon = message.guild.name;
-let embeda = new Discord.RichEmbed()
-    .setColor(0x00AE86)
-    .setThumbnail(message.author.avatarURL)
-    .addField(`${message.member.displayName}`, `Odmowa dostępu`)
-    .setFooter(sicon)
-    .setTimestamp()
-    if (!message.member.roles.find(r => r.name === config.rolaaccept)) return message.channel.send(embeda);
-
-          const tekst = args.join(' ');
-          if (!tekst) return message.channel.send("Podaj tekst podania"); 
-          let reportEmbed = new Discord.RichEmbed() 
-            .setTitle("📝 Podanie rozpatrzone pozytywnie!") 
-            .setColor(`#4BFF1E`) 
-            .addField("Osoba sprawdzająca:", message.author)
-            .addField("Wynik", tekst)
-            .setFooter(sicon) 
-            .setThumbnail(message.author.avatarURL)
-            .setTimestamp() 
-             
-            message.delete().catch(O_o=>{});
-            message.guild.channels.get(config.idaccept).sendMessage(reportEmbed);
-        
-            return;     
-    }
-    
-    
-    module.exports.help = {
-    
-      name:`${config.komendaaccept}`
-    
-    }
+          const filter = response => {
+            return response.author.id === message.author.id
+          };
+          let embed = new RichEmbed()
+          if (!message.member.roles.find(r => r.name === config.rolaaccept)) return message.channel.send("Nie możesz :laughing: ");
+          message.reply(`Oznacz osobę składającą podanie`).then((w) => {
+              message.channel.awaitMessages(filter, {
+                  max: 1,
+                  time: 60000,
+                  errors: ['time']
+              }).then(c => {
+                  let osoba = c.first().content;
+                  message.reply(`Na co składano podanie`).then((w) => {
+                    message.channel.awaitMessages(filter, {
+                        max: 1,
+                        time: 60000,
+                        errors: ['time']
+                    }).then(a => {
+                        let naco = a.first().content;   
+                        message.channel.bulkDelete(1)
+                        let embed = new RichEmbed() 
+                          .setTitle("📝 Podanie rozpatrzone pozytywnie!") 
+                          .setColor(`#4BFF1E`) 
+                          .addField("Osoba sprawdzająca:", message.author)
+                          .addField("Autor podania:", `${osoba}`)
+                          .addField("Na co/Do jakiej frakcji", `${naco}`)
+                          message.channel.send(embed)
+                          message.channel.bulkDelete(5)
+                      
+                        })
+                      })
+                                  return;     
+                  })
+                })   
+            }    
+                
+                  module.exports.help = {
+                    name: "akcept",
+                  };
