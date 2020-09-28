@@ -36,15 +36,15 @@ module.exports.run = async(bot, message, args, msg) => {
                                         message.channel.bulkDelete(1)
                                         let embed = new RichEmbed()
                                             .addField("Tytuł ogłoszenia:", `${title}`)
-                                            .addField("Opis;", `${desc}`)
-                                            .addField("Cena;", `${price}`)
+                                            .addField("Opis:", `${desc}`)
+                                            .addField("Cena:", `${price}`)
                                             .setColor("#D40F0A")
                                             .setThumbnail(message.author.avatarURL)
                                             .addField("Autor Ogłoszenia:", `${message.author}`)
                                             .setImage(photo)
                                             .setTimestamp() 
                                             message.channel.send(embed)
-                                            message.channel.bulkDelete(6)
+                                            message.channel.bulkDelete(7)
                                             
                                     }).catch((e => {
                                         message.reply(`Czasu upłynął! Spróbuj jeszcze raz!`)
