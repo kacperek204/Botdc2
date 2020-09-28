@@ -36,7 +36,7 @@ module.exports.run = async(bot, message, args, msg) => {
                                     .addField("Autor Ogłoszenia", `${message.author}`)
                                     .setTimestamp() 
                                     message.channel.send(embed)
-                                    message.channel.bulkDelete(3)
+                                    message.channel.bulkDelete(5)
                                     
                             }).catch((e => {
                                 message.reply(`Czasu upłynął! Spróbuj jeszcze raz!`)
