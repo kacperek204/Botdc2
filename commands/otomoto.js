@@ -27,7 +27,7 @@ module.exports.run = async (bot, message, args) => {
                             .addField("Autor Ogłoszenia", `${message.author}`)
                             .setTimestamp() 
                         message.channel.send(embed)
-                        message.channel.bulkDelete(4)
+                        message.channel.bulkDelete(3)
                     }))
                 }) 
             }).catch((e => {
