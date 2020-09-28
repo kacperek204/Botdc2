@@ -23,7 +23,6 @@ module.exports.run = async (bot, message, args) => {
                             .setTitle(title)
                             .setDescription(desc)
                             .setColor("#D40F0A")
-                            .setDescription(price)
                             .setThumbnail(message.author.avatarURL)
                             .addField("Autor Ogłoszenia", `${message.author}`)
                             .setTimestamp() 
