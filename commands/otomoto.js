@@ -21,7 +21,7 @@ module.exports.run = async (bot, message, args) => {
                         message.channel.bulkDelete(1)
                         let embed = new RichEmbed()
                             .setTitle(title)
-                            .setFooter("Treść ogłoszenia")
+                            .addField("Treść ogłoszenia")
                             .setDescription(desc)
                             .setColor("#D40F0A")
                             .setThumbnail(message.author.avatarURL)
