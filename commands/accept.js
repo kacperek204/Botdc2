@@ -31,11 +31,12 @@ module.exports.run = async(bot, message, args, msg) => {
                           message.channel.send(embed)
                           message.channel.bulkDelete(5)
                       
-                        })
-                      })
-                                  return;     
+                      }).catch((e => {
+                          message.reply(`Czasu upłynął! Spróbuj jeszcze raz!`)
+                      }))   
                   })
                 })   
+              })
             }    
                 
                   module.exports.help = {
