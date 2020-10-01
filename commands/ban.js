@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
+  const kLogs = message.guild.channels.find(channel => channel.name === "『🔧』ban");
   let bUser = message.guild.member(
     message.mentions.users.first() || message.guild.members.get(args[0])
   );
